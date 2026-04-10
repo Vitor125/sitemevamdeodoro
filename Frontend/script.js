@@ -3,6 +3,7 @@ const CHURCH_INFO = {
   address: "Estrada Marechal Alencastro, 550 A - Deodoro, Rio de Janeiro - RJ",
   mapQuery: "Estrada Marechal Alencastro, 550 A - Deodoro, Rio de Janeiro - RJ",
   whatsappNumber: "5521970393163",
+  instagramUrl: "https://www.instagram.com/mevam.riodejaneiro/",
   whatsappMessage: "Olá! Escaneei o QR code da MEVAM Rio Deodoro e gostaria de receber mais informações.",
   formsUrl: "https://forms.gle/WPBE4dC52yJAsZpW6",
   footerNote: "Domingos às 09:00 e às 18:30."
@@ -106,6 +107,15 @@ function applyChurchLinks() {
 
   document.querySelectorAll("[data-map-link]").forEach((link) => {
     link.href = buildMapLink();
+  });
+
+  document.querySelectorAll("[data-instagram-link]").forEach((link) => {
+    if (CHURCH_INFO.instagramUrl) {
+      link.href = CHURCH_INFO.instagramUrl;
+      return;
+    }
+
+    disableLink(link, "Instagram em atualização");
   });
 
   document.querySelectorAll("[data-forms-link]").forEach((link) => {
