@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Veja fotos da MEVAM Rio Deodoro e conheça um pouco do ambiente da igreja."
+  >
+  <title>Fotos | MEVAM Rio Deodoro</title>
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("mevam-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = savedTheme || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="gallery-page">
+    <nav class="topbar" aria-label="Navegação da galeria">
+      <a class="brand" href="index.html" aria-label="Voltar para a página inicial">
+        <img src="assets/mevam-logo.png" alt="Logo da MEVAM Rio Deodoro">
+        <span>MEVAM Rio Deodoro</span>
+      </a>
+
+      <div class="topbar-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+          <span data-theme-toggle-label>Modo escuro</span>
+        </button>
+        <a class="button secondary" href="index.html">Voltar ao início</a>
+      </div>
+    </nav>
+
+    <section class="gallery-header">
+      <div class="gallery-copy">
+        <span class="eyebrow">Fotos da igreja</span>
+        <h1>Um pouco do ambiente que te espera por aqui.</h1>
+        <p>
+          Esta página foi preparada para mostrar momentos da igreja e pode receber novas imagens
+          sempre que vocês quiserem ampliar a galeria.
+        </p>
+        <a class="button primary gallery-back" href="index.html#contato">Falar com a equipe</a>
+      </div>
+
+      <div class="gallery-photo">
+        <img src="assets/mevam-culto.jpg" alt="Momento de culto na MEVAM Rio Deodoro">
+      </div>
+    </section>
+
+    <section class="gallery-grid" aria-label="Galeria de fotos">
+      <article class="photo-card focus-stage">
+        <img src="assets/mevam-culto.jpg" alt="Equipe de louvor ministrando durante o culto">
+        <div class="photo-caption">
+          <strong>Louvor</strong>
+          <span>Momentos de adoração e entrega.</span>
+        </div>
+      </article>
+
+      <article class="photo-card focus-wide">
+        <img src="assets/mevam-culto.jpg" alt="Visão geral do culto com a igreja reunida">
+        <div class="photo-caption">
+          <strong>Comunhão</strong>
+          <span>Um ambiente para receber bem quem chega.</span>
+        </div>
+      </article>
+
+      <article class="photo-card focus-crowd">
+        <img src="assets/mevam-culto.jpg" alt="Pessoas participando do culto e adorando juntas">
+        <div class="photo-caption">
+          <strong>Família</strong>
+          <span>Uma igreja acessível, acolhedora e aberta para todos.</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="gallery-cta">
+      <div>
+        <h2>Quer visitar a igreja ou pedir ajuda?</h2>
+        <p>
+          Na página principal você encontra horários, localização, WhatsApp e o botão para formulário.
+        </p>
+      </div>
+      <a class="button primary" href="index.html">Abrir página principal</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
