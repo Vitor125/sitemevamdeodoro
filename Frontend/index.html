@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Escaneou o QR code? Conheça a MEVAM Rio Deodoro, veja os horários de culto, localização e fale conosco agora."
+  >
+  <title>MEVAM Rio Deodoro</title>
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("mevam-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = savedTheme || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero-shell" id="inicio">
+    <nav class="topbar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <img src="assets/mevam-logo.png" alt="Logo da MEVAM Rio Deodoro">
+        <span>MEVAM Rio Deodoro</span>
+      </a>
+
+      <div class="topbar-actions">
+        <div class="nav-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#cultos">Horários</a>
+          <a href="#localizacao">Localização</a>
+          <a href="#contato">Contato</a>
+          <a href="fotos.html">Fotos</a>
+        </div>
+
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+          <span data-theme-toggle-label>Modo escuro</span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Você chegou pelo QR code?</span>
+        <h1>Queremos te receber na MEVAM Rio Deodoro.</h1>
+        <p>
+          Esta página foi feita para facilitar seu primeiro contato com a igreja. Aqui você encontra
+          os horários dos cultos, a localização e um caminho rápido para falar com a nossa equipe.
+        </p>
+
+        <p class="hero-support-copy">
+          Se você quer visitar a igreja, conhecer melhor a nossa comunidade ou está vivendo um momento
+          em que precisa de apoio, queremos caminhar com você.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
+            Falar no WhatsApp
+          </a>
+          <a class="button secondary" data-forms-link href="#" target="_blank" rel="noreferrer">
+            Queremos te conhecer melhor
+          </a>
+        </div>
+
+        <div class="quick-highlights" aria-label="Informações rápidas">
+          <article>
+            <strong>Domingo pela manhã</strong>
+            <span>09:00</span>
+          </article>
+          <article>
+            <strong>Domingo à noite</strong>
+            <span>18:30</span>
+          </article>
+          <article>
+            <strong>Contato rápido</strong>
+            <span>WhatsApp e formulário</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-photo-card">
+          <img src="assets/mevam-culto.jpg" alt="Momento de louvor durante um culto da igreja">
+        </div>
+
+        <aside class="hero-panel">
+          <p class="panel-kicker">Fale conosco</p>
+          <h2>Quer pedir oração, tirar dúvidas ou receber ajuda?</h2>
+          <p>
+            Se você quer conhecer melhor a igreja ou precisa de apoio, nossa equipe pode falar com
+            você pelo WhatsApp ou entrar em contato após o envio do formulário.
+          </p>
+
+          <div class="stacked-actions">
+            <a class="button primary wide" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
+              Falar agora no WhatsApp
+            </a>
+            <a class="button ghost wide" data-forms-link href="#" target="_blank" rel="noreferrer">
+              Queremos te conhecer melhor
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section about-section" id="sobre">
+      <div class="about-shell">
+        <div class="section-heading align-left">
+          <span class="section-kicker">Sobre a igreja</span>
+          <h2>Uma igreja para acolher, discipular e caminhar com pessoas.</h2>
+          <p>
+            A MEVAM Rio Deodoro é um lugar de adoração, palavra, comunhão e cuidado. Queremos receber
+            bem quem está chegando, fortalecer famílias e estar perto de quem precisa de oração, direção
+            ou apoio em um momento difícil.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>Palavra e adoração</h3>
+            <p>Nos reunimos para buscar a Deus com sinceridade, ouvir a palavra e crescer na fé.</p>
+          </article>
+
+          <article class="about-card">
+            <h3>Cuidado e oração</h3>
+            <p>Se você precisa de ajuda, aconselhamento ou oração, queremos estar perto de você.</p>
+          </article>
+
+          <article class="about-card">
+            <h3>Família e comunhão</h3>
+            <p>Desejamos que cada pessoa se sinta acolhida, bem recebida e à vontade para voltar.</p>
+          </article>
+        </div>
+
+        <div class="about-actions">
+          <a class="button primary" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
+            Quero falar com a igreja
+          </a>
+          <a class="button ghost" data-forms-link href="#" target="_blank" rel="noreferrer">
+            Conte um pouco sobre você
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-section" id="cultos">
+      <div class="section-heading">
+        <span class="section-kicker">Horários de culto</span>
+        <h2>Escolha um horário e venha nos visitar.</h2>
+        <p>
+          Nossa programação de domingo foi organizada para acolher bem quem está chegando pela primeira vez.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="info-card service-card">
+          <span class="service-badge">Manhã</span>
+          <h3>Culto de domingo</h3>
+          <p class="service-time">09:00</p>
+          <p>Um culto para começar o domingo com fé, palavra e comunhão.</p>
+        </article>
+
+        <article class="info-card service-card">
+          <span class="service-badge">Noite</span>
+          <h3>Culto de domingo</h3>
+          <p class="service-time">18:30</p>
+          <p>Um encontro acolhedor para você, sua família e quem deseja conhecer a igreja.</p>
+        </article>
+
+        <article class="info-card support-card" id="contato">
+          <span class="service-badge">Contato rápido</span>
+          <h3>Fale com a nossa equipe</h3>
+          <p>
+            Se esta é a sua primeira vez, podemos te orientar sobre horários, localização e como participar.
+          </p>
+          <div class="stacked-actions">
+            <a class="button primary wide" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
+              Chamar no WhatsApp
+            </a>
+            <a class="button ghost wide" data-forms-link href="#" target="_blank" rel="noreferrer">
+              Conte um pouco sobre você
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section location-section" id="localizacao">
+      <div class="section-heading align-left">
+        <span class="section-kicker">Onde estamos</span>
+        <h2>Veja onde estamos e trace sua rota com facilidade.</h2>
+      </div>
+
+      <div class="location-layout">
+        <article class="info-card address-card">
+          <p class="panel-kicker">Endereço</p>
+          <h3 data-address-label>Estrada Marechal Alencastro, 550 A - Deodoro, Rio de Janeiro - RJ</h3>
+          <p>
+            Toque no botão abaixo para abrir o mapa no celular e chegar com tranquilidade.
+          </p>
+
+          <div class="stacked-actions">
+            <a class="button primary wide" data-map-link href="#" target="_blank" rel="noreferrer">
+              Abrir no mapa
+            </a>
+            <a class="button secondary wide" href="fotos.html">
+              Ver fotos da igreja
+            </a>
+          </div>
+        </article>
+
+        <div class="map-card" aria-label="Mapa com a localização da igreja">
+          <iframe
+            title="Mapa da igreja"
+            data-map-embed
+            src=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-preview">
+      <div class="section-heading">
+        <span class="section-kicker">Ambiente da igreja</span>
+        <h2>Veja um pouco do ambiente que espera por você.</h2>
+        <p>
+          Essa galeria ajuda quem chegou pelo panfleto a conhecer melhor a igreja antes da visita.
+        </p>
+      </div>
+
+      <div class="preview-card">
+        <img src="assets/mevam-culto.jpg" alt="Pessoas reunidas em culto na igreja">
+        <div>
+          <h3>Um ambiente de adoração, palavra e comunhão</h3>
+          <p>
+            A galeria mostra momentos da igreja e pode receber novas imagens sempre que vocês quiserem ampliar esse material.
+          </p>
+          <a class="button primary" href="fotos.html">Abrir página de fotos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="cta-band">
+        <div>
+          <span class="section-kicker">Seu próximo passo</span>
+          <h2>Se quiser falar com alguém da igreja, esse é o melhor momento.</h2>
+          <p>
+            Para quem chegou aqui pelo QR code, deixamos os dois caminhos mais rápidos: WhatsApp para contato imediato
+            e formulário para pedido de ajuda, oração ou mais informações.
+          </p>
+        </div>
+        <div class="stacked-actions">
+          <a class="button primary wide" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
+            Falar no WhatsApp
+          </a>
+          <a class="button ghost wide" data-forms-link href="#" target="_blank" rel="noreferrer">
+            Queremos te conhecer melhor
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <img class="footer-logo" src="assets/mevam-logo.png" alt="Logo da MEVAM Rio Deodoro">
+      <p>MEVAM Rio Deodoro</p>
+    </div>
+    <small id="footer-note"></small>
+  </footer>
+
+  <div class="mobile-cta" aria-label="Ações rápidas">
+    <a class="button primary" data-whatsapp-link href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+    <a class="button ghost" data-forms-link href="#" target="_blank" rel="noreferrer">Conte sobre você</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
